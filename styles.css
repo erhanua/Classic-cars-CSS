@@ -5,6 +5,8 @@ body {
     background-color: #f4f4f4;
 }
 
+
+
 header {
     background-color: #888888;
     color: white;
@@ -16,6 +18,13 @@ header h1 {
     margin: 0;
     font-size: 30px;
 }
+
+.header-text {
+        /* Animasyon uygulaması */
+        animation: slideFromRight 2s ease-out forwards; /* 2 saniye süreyle, ease-out zamanlama fonksiyonuyla ve animasyon sonunda son durumda kalacak şekilde */
+        transform: translateX(100%); /* Başlangıçta ekranın dışında */
+    }
+
 nav {
     display: block;
     text-align: center;
@@ -51,15 +60,21 @@ section h2{
 }
 
 section img {
-    max-width: 100%;
-    display: block;
-    margin: 1em auto;
+    width: 850px; 
+    height:550px; 
+    object-fit: cover; 
+    display: block; 
+    margin: 40px auto; 
+    border: #333;
+    border-radius: 10px;
 }
+
+
 
 section p {
     text-align: center;
     font-size: 20px;
-    font-family: 'Georgia', serif;
+    font-family:  'Nunito Sans', sans-serif;
 }
 
 section p:nth-of-type(1) {
@@ -134,4 +149,13 @@ input[type="submit"], input[type="reset"] {
 input[type="submit"]:hover, input[type="reset"]:hover {
     background-color: #555;
 }
+
+/* Animasyon tanımı */
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%); /* Başlangıçta ekranın dışında */
+    }
+    to {
+        transform: translateX(0); /* Animasyon sonunda ekranın içinde */
+    }
 }
