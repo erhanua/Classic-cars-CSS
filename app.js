@@ -36,7 +36,7 @@ window.onload = function() {
     
     if (userResponse === "yes") {
         console.log("Play the music");
-        message = message + " Play the music"
+        message = message + " play the music and enjoy"
     }
 
     document.querySelector('header h1').textContent = message;
