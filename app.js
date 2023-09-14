@@ -1,9 +1,9 @@
 window.onload = function() {
-    // Kullanıcıdan ismini sor
+    // Ask Name
     let userName = prompt("Please enter your name:");
 
     // 1. User Input Color Theme
-    let userColor = prompt("Hello " + userName + "! Please enter a color for the theme (e.g., blue, red):");
+    let userColor = prompt("Hello " + userName + "! Please enter a color for the theme (e.g., blue, red)" );
     if (userColor) {
         document.querySelector('header').style.backgroundColor = userColor;
         document.querySelector('footer').style.backgroundColor = userColor;
@@ -13,7 +13,7 @@ window.onload = function() {
     let timeInput = prompt("Please enter the current hour (0-23):");
     let time = parseInt(timeInput); // Kullanıcının girdiğini bir sayıya dönüştür
     
-    let message = "Welcome to The Timeless Journey of Classic Cars";
+    let message = "Welcome to The Timeless Journey of Classic Cars.";
     if (time >= 0 && time <= 23) {
         if (time >= 0 && time < 12) {
             message = "Good Morning, " + userName + ". " + message;
@@ -29,7 +29,6 @@ window.onload = function() {
     // Mesajı konsola yazdır
     console.log(message);
 
-    document.querySelector('header h1').textContent = message;
 
     let userResponse = prompt("Do you like music? (yes/no)");
 
@@ -37,5 +36,8 @@ window.onload = function() {
     
     if (userResponse === "yes") {
         console.log("Play the music");
+        message = message + " Play the music"
     }
+
+    document.querySelector('header h1').textContent = message;
 }
