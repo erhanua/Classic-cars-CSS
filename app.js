@@ -41,3 +41,22 @@ window.onload = function() {
 
     document.querySelector('header h1').textContent = message;
 }
+
+function getRating() {
+    let rating = parseInt(prompt("Rate me 1-5"));
+
+    // Eğer kullanıcı geçerli bir değer girmezse bu fonksiyonu sonlandır.
+    if (isNaN(rating) || rating < 1 || rating > 5) {
+        alert("Please enter a valid number between 1 and 5.");
+        return;
+    }
+
+    let stars = document.querySelectorAll('#ratingSection i');
+    for (let i = 0; i < stars.length; i++) {
+        if (i < rating) {
+            stars[i].className = "fas fa-star fa-flip fa-xl"; // Dolu yıldız
+        } else {
+            stars[i].className = "far fa-star fa-flip fa-xl"; // Boş yıldız
+        }
+    }
+}

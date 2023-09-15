@@ -1,3 +1,7 @@
+
+
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -61,7 +65,7 @@ section h2{
 
 section img {
     width: 850px; 
-    height:550px; 
+    height:400px; 
     object-fit: cover; 
     display: block; 
     margin: 40px auto; 
@@ -158,4 +162,58 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     to {
         transform: translateX(0); /* Animasyon sonunda ekranın içinde */
     }
+}
+
+
+/* Yıldız Stili */
+#ratingSection i {
+    font-size: 30px; /* Yıldız boyutu */
+    margin-right: 10px; /* Yıldızlar arasında boşluk */
+    cursor: pointer; /* Yıldızın üzerine gelindiğinde imlecin şeklini el şekline dönüştür */
+    transition: color 0.3s; /* Yıldızın renginin değişim animasyonu */
+    color: gold
+}
+
+#ratingSection i:hover {
+    color: white; /* Yıldızın üzerine gelindiğinde rengi */
+}
+
+
+
+/* 1950'ler Tarzı Rate Me Butonu */
+#rateButton {
+    background-color: #FFB6C1; /* Pastel pembe */
+    border: none;
+    border-radius: 15px; /* Yuvarlatılmış köşeler */
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-family: 'Courier New', Courier, monospace; /* Retro bir yazı tipi */
+    font-size: 20px;
+    font-weight: bold; /* Kalın yazı tipi */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Düğmeye tıklanıldığında renk değişimi için animasyon */
+}
+
+#rateButton:hover {
+    background-color: #FF69B4; /* Düğmenin üzerine gelindiğinde daha koyu bir pembe */
+}
+
+#printButton {
+    background-color: #FFB6C1; /* Pastel pembe */
+    border: none;
+    border-radius: 15px; /* Yuvarlatılmış köşeler */
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-family: 'Courier New', Courier, monospace; /* Retro bir yazı tipi */
+    font-size: 20px;
+    font-weight: bold; /* Kalın yazı tipi */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Düğmeye tıklanıldığında renk değişimi için animasyon */
+
+}
+
+#printButton:hover {
+    background-color: #FF69B4; /* Butonun üzerine gelindiğinde arka plan rengi */
 }
