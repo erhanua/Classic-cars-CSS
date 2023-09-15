@@ -42,7 +42,7 @@ window.onload = function() {
     document.querySelector('header h1').textContent = message;
 }
 
-function getRating() {
+/*function getRating() {
     let rating = parseInt(prompt("Rate me 1-5"));
 
     // Eğer kullanıcı geçerli bir değer girmezse bu fonksiyonu sonlandır.
@@ -58,5 +58,30 @@ function getRating() {
         } else {
             stars[i].className = "far fa-star fa-flip fa-xl"; // Boş yıldız
         }
+    
+}*/
+
+function getRating() {
+    let rating;
+
+    do {
+        rating = parseInt(prompt("Rate me 1-5"));
+
+        if (isNaN(rating) || rating < 1 || rating > 5) {
+            alert("Please enter a valid number between 1 and 5.");
+        }
+    } while (isNaN(rating) || rating < 1 || rating > 5);
+
+    let stars = document.querySelectorAll('#ratingSection i');
+    let i = 0;
+
+    while (i < stars.length) {
+        if (i < rating) {
+            stars[i].className = "fas fa-star fa-flip fa-xl"; // Dolu yıldız
+        } else {
+            stars[i].className = "far fa-star fa-flip fa-xl"; // Boş yıldız
+        }
+        i++;
     }
 }
+
